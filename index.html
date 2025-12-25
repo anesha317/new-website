@@ -1,97 +1,110 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modern Shop Template</title>
+    <title>CINEMA NIGHT — Беляевка</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- HEADER -->
-    <header class="header">
-        <div class="container nav-container">
-            <div class="logo">Modern<span>Store</span></div>
-            <nav class="nav">
-                <a href="#home">Home</a>
-                <a href="#products">Products</a>
-                <a href="#about">About</a>
-                <a href="#contact">Contact</a>
-                <button class="btn primary-btn">Shop Now</button>
-            </nav>
-        </div>
+
+    <div class="creator-tag">Создатель сайта: Анна Кириченко, 9-Б класс</div>
+    
+    <div id="magic-text" class="cloud-text">Погрузитесь в мир магии кино...</div>
+
+    <header>
+        <div class="logo">CINEMA<span>NIGHT</span></div>
+        <nav>
+            <a href="#horror">Ужастики</a>
+            <a href="#romance">Романтика</a>
+            <a href="#comedy">Смешные</a>
+        </nav>
     </header>
 
-    <!-- HERO SECTION -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1>Discover the Future of Shopping</h1>
-            <p>Modern design. Premium quality. Exclusive offers.</p>
-            <button class="btn secondary-btn">Explore Now</button>
-        </div>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section id="products" class="products section">
-        <h2 class="section-title">Featured Products</h2>
-        <div class="product-grid">
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x250" alt="Product 1">
-                <h3>Product Name</h3>
-                <p>$49.99</p>
-                <button class="btn">Buy Now</button>
+    <main>
+        <section id="horror" class="reveal active">
+            <h2 class="category-title">Ужастики</h2>
+            <div class="movies-grid">
+                <div class="movie-card" onclick="buyTicket('5 ночей с Фредди', '18:00', '4')">
+                    <img src="https://i.pinimg.com/736x/fb/1f/d8/fb1fd8c75ea7d9d6ffd516f7d3706c02.jpg">
+                    <div class="info"><h4>Фнаф</h4><p>18:00 | Зал 4</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Баба Яга', '20:30', '1')">
+                    <img src="https://i.pinimg.com/1200x/00/c6/1e/00c61e76eb2267f971839034a311bc52.jpg">
+                    <div class="info"><h4>Баба Яга</h4><p>20:30 | Зал 1</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Пила 10', '22:00', '6')">
+                    <img src="https://i.pinimg.com/736x/4b/b9/19/4bb91990cda50be108bd2bec3f8d3fc5.jpg">
+                    <div class="info"><h4>Пила 10</h4><p>22:00 | Зал 6</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Ужасающий 2', '23:45', '2')">
+                    <img src="https://i.pinimg.com/736x/84/89/15/84891563572bb93b709eb6f70f5cd329.jpg">
+                    <div class="info"><h4>Ужасающий 2</h4><p>23:45 | Зал 2</p><button class="card-btn">Купить билет</button></div>
+                </div>
             </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x250" alt="Product 2">
-                <h3>Stylish Accessory</h3>
-                <p>$29.99</p>
-                <button class="btn">Buy Now</button>
+        </section>
+
+        <section id="romance" class="reveal">
+            <h2 class="category-title">Романтика</h2>
+            <div class="movies-grid">
+                <div class="movie-card" onclick="buyTicket('Моя вина', '15:00', '3')">
+                    <img src="https://i.pinimg.com/736x/d4/9b/ba/d49bba26bb5acdbc7cf08401fa965031.jpg">
+                    <div class="info"><h4>Моя вина</h4><p>15:00 | Зал 3</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Наша вина', '17:30', '3')">
+                    <img src="https://i.pinimg.com/1200x/c1/52/90/c1529071bff2bd77e0166007cdbb51ac.jpg">
+                    <div class="info"><h4>Наша вина</h4><p>17:30 | Зал 3</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Из моего окна', '19:00', '5')">
+                    <img src="https://i.pinimg.com/736x/f7/94/4f/f7944f7cd7277d6c506969107282a655.jpg">
+                    <div class="info"><h4>Из моего окна</h4><p>19:00 | Зал 5</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Из моего окна 2', '21:15', '5')">
+                    <img src="https://i.pinimg.com/1200x/ce/2a/d9/ce2ad99bd45565bd6c66de99e67a68b4.jpg">
+                    <div class="info"><h4>Из моего окна 2</h4><p>21:15 | Зал 5</p><button class="card-btn">Купить билет</button></div>
+                </div>
             </div>
-            <div class="product-card">
-                <img src="https://via.placeholder.com/300x250" alt="Product 3">
-                <h3>Premium Headphones</h3>
-                <p>$99.99</p>
-                <button class="btn">Buy Now</button>
+        </section>
+
+        <section id="comedy" class="reveal">
+            <h2 class="category-title">Смешные</h2>
+            <div class="movies-grid">
+                <div class="movie-card" onclick="buyTicket('Дэдпул', '14:00', '8')">
+                    <img src="https://i.pinimg.com/1200x/b2/fd/48/b2fd48884cace5483daf5d9745a0c56e.jpg">
+                    <div class="info"><h4>Дэдпул</h4><p>14:00 | Зал 8</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Мальчишник', '16:45', '2')">
+                    <img src="https://i.pinimg.com/1200x/9d/24/27/9d2427f26cf3d1629fd4d2d84cae266b.jpg">
+                    <div class="info"><h4>Мальчишник</h4><p>16:45 | Зал 2</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Гадкий Я 4', '12:00', '1')">
+                    <img src="https://i.pinimg.com/736x/f4/d4/33/f4d43316dcf9267dc58ebf82275ea058.jpg">
+                    <div class="info"><h4>Гадкий Я 4</h4><p>12:00 | Зал 1</p><button class="card-btn">Купить билет</button></div>
+                </div>
+                <div class="movie-card" onclick="buyTicket('Панда 4', '11:00', '7')">
+                    <img src="https://i.pinimg.com/736x/75/eb/1d/75eb1d3c965ddac7771f22ee43525ee3.jpg">
+                    <div class="info"><h4>Панда 4</h4><p>11:00 | Зал 7</p><button class="card-btn">Купить билет</button></div>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
-    <!-- ABOUT -->
-    <section id="about" class="about section">
-        <h2 class="section-title">About Us</h2>
-        <div class="about-content">
-            <p>Welcome to <strong>ModernStore</strong> — where innovation meets style. We provide high-quality modern products that make your everyday life easier and more enjoyable.</p>
-            <p>Our team is dedicated to bringing you the best online shopping experience with a clean, minimalist, and responsive design.</p>
-        </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="contact section">
-        <h2 class="section-title">Get in Touch</h2>
-        <form class="contact-form">
-            <input type="text" placeholder="Your Name" required>
-            <input type="email" placeholder="Email Address" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit" class="btn primary-btn">Send Message</button>
-        </form>
-    </section>
-
-    <!-- FOOTER -->
     <footer class="footer">
-        <div class="container footer-container">
-            <p>&copy; 2025 ModernStore. All rights reserved.</p>
-            <div class="socials">
-                <a href="#">Facebook</a>
-                <a href="#">Instagram</a>
-                <a href="#">Twitter</a>
-            </div>
+        <h2 class="footer-title">Лучший кинотеатр в Беляевке!</h2>
+        <div class="footer-note">
+            <p>Я старалась сделать что-то похожее на примеры, которые видела.</p>
+            <p class="small-text">(С таблицами не получалось никак)</p>
         </div>
     </footer>
 
+    <div id="custom-alert" class="hidden">
+        <div class="alert-box">
+            <div id="alert-text"></div>
+            <button onclick="closeAlert()">Понятно:0</button>
+        </div>
+    </div>
+
     <script src="script.js"></script>
 </body>
-<div class="burger" id="burger">
-    <div></div>
-    <div></div>
-    <div></div>
-</div>
 </html>
